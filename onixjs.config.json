@@ -1,0 +1,5 @@
+{
+    "apps": [
+        "ExampleApp@example.app:disabled"
+    ]
+}
