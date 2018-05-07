@@ -1,6 +1,6 @@
 {
   "name": "@onixjs/starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -16,9 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@onixjs/core": "^1.0.0-alpha.23",
+    "@onixjs/core": "^1.0.0-alpha.27",
+    "@types/ws": "^5.1.0",
     "mongoose": "^5.0.17",
-    "reflect-metadata": "^0.1.12"
+    "reflect-metadata": "^0.1.12",
+    "ws": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "^1.12.1",
