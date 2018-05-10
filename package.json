@@ -1,29 +1,30 @@
 {
   "name": "@onixjs/starter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run lint:fix && node_modules/.bin/tsc",
+    "build": "npm run lint:fix && tsc",
     "start": "npm run build && node dist/index.js",
-    "clean:unix": "rm -rf dist dist6",
-    "clean:windows": "rmdir /S /Q dist dist6",
+    "clean:unix": "rm -rf dist",
+    "clean:windows": "rmdir /S /Q dist",
     "lint": "npm run prettier:check",
     "lint:fix": "npm run prettier:fix",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\"",
     "prettier:check": "npm run prettier:cli -- -l",
     "prettier:fix": "npm run prettier:cli -- --write"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Casarrubias",
+  "license": "MIT",
   "dependencies": {
-    "@onixjs/core": "^1.0.0-alpha.27",
-    "@types/ws": "^5.1.0",
+    "@onixjs/core": "^1.0.0-alpha.28",
+    "@onixjs/sdk": "^1.0.0-alpha.14",
     "mongoose": "^5.0.17",
     "reflect-metadata": "^0.1.12",
     "ws": "^5.1.1"
   },
   "devDependencies": {
+    "@types/ws": "^5.1.0",
     "prettier": "^1.12.1",
     "typescript": "^2.8.3"
   }
