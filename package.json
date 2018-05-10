@@ -1,12 +1,13 @@
 {
   "name": "@onixjs/starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run clean && npm run lint:fix && ./node_modules/.bin/tsc",
+    "build": "npm run lint:fix && node_modules/.bin/tsc",
     "start": "npm run build && node dist/index.js",
-    "clean": "rm -rf dist dist6",
+    "clean:unix": "rm -rf dist dist6",
+    "clean:windows": "rmdir /S /Q dist dist6",
     "lint": "npm run prettier:check",
     "lint:fix": "npm run prettier:fix",
     "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\"",
