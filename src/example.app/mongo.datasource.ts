@@ -1,4 +1,4 @@
-import {DataSource, IDataSource, Constructor, IModel} from '@onixjs/core';
+import {DataSource, IDataSource, IModelRegister} from '@onixjs/core';
 import {Mongoose} from 'mongoose';
 /**
  * @class MongooseDatasource
@@ -38,7 +38,8 @@ export class MongooseDatasource implements IDataSource {
    * each model using this datasource will be passed through this
    * method. Create the instance according the ORM documentation.
    */
-  register(Class: Constructor, model: any, schema: IModel) {
-    return this.mongoose.model(Class.name, schema);
+  async register(register: IModelRegister) {
+    register.model = this.mongoose.model(register.class.name, register.schema);
+    return register;
   }
 }
